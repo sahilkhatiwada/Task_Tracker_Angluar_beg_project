@@ -1,1 +1,4 @@
-<p>task-list works!</p>
+<app-add-task-form></app-add-task-form>
+<div *ngFor="let task of tasks">
+  <app-task-item [task]="task"></app-task-item>
+</div>

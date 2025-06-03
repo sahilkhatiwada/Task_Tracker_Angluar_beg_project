@@ -1,1 +1,12 @@
-<p>task-item works!</p>
+<div class="task-item">
+  <input
+    type="checkbox"
+    class="task-item__checkbox"
+    [checked]="task.completed"
+    (change)="toggle()"
+  />
+  <p class="task-item__title" [ngStyle]="{ 'text-decoration': task.completed ? 'line-through' : 'none' }">
+    {{ task.title }}
+  </p>
+  <button class="task-item__delete-button" (click)="delete()">Delete</button>
+</div>
